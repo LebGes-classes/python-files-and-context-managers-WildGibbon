@@ -8,13 +8,27 @@ from HomeWork.ItemCatalog.ItemCatalogMenuView import ItemCatalogMenuView
 
 
 class ItemCatalogMenu:
-    def __init__(self, catalog: ItemCatalog, catalog_menu_view: ItemCatalogMenuView, item_menu: IItemMenu):
+    """
+    Представляет меню для взаимодействия с каталогом товаров.
+    """
+    def __init__(self, catalog: ItemCatalog, catalog_menu_view: ItemCatalogMenuView, item_menu: IItemMenu) -> None:
+        """
+        Инициализирует меню каталога товаров.
+
+        Args:
+            catalog (ItemCatalog): Каталог товаров.
+            catalog_menu_view (ItemCatalogMenuView): Представление для отображения меню каталога.
+            item_menu (IItemMenu): Меню для взаимодействия с отдельным товаром.
+        """
         self._view = catalog_menu_view
         self.__item_menu = item_menu
         self.__menu_opened = False
         self.__catalog = catalog
 
-    def open(self):
+    def open(self) -> None:
+        """
+        Запускает цикл меню для взаимодействия с каталогом товаров.
+        """
         self.__menu_opened = True
 
         while self.__menu_opened:
@@ -41,7 +55,17 @@ class ItemCatalogMenu:
             else:
                 self.__item_menu.open(self.__catalog.get_items()[choice - 1])
 
-    def __handle_input(self, lower_limit, upper_limit):
+    def __handle_input(self, lower_limit: int, upper_limit: int) -> int:
+        """
+        Обрабатывает ввод пользователя и проверяет его на корректность.
+
+        Args:
+            lower_limit (int): Нижняя граница допустимого значения.
+            upper_limit (int): Верхняя граница допустимого значения.
+
+        Returns:
+            int: Корректный выбор пользователя.
+        """
         valid_input = False
         choice = 0
 

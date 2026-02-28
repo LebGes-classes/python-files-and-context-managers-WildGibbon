@@ -1,19 +1,19 @@
 from HomeWork.FileManagement.Deserialization.IItemCatalogDeserializer import IItemCatalogDeserializer
+from HomeWork.Item.Item import Item
 from HomeWork.Item.ItemState import ItemState
 from HomeWork.ItemCatalog.ItemCatalog import ItemCatalog
-from HomeWork.Item.Item import Item
 
 
-class TxtItemCatalogDeserializer(IItemCatalogDeserializer):
+class CsvItemCatalogDeserializer(IItemCatalogDeserializer):
     """
-    Класс для десериализации каталога товаров из текстового файла.
+    Класс для десериализации каталога товаров из файла CSV.
     """
     def deserialize(self, file_path: str) -> ItemCatalog:
         """
-        Десериализует каталог товаров из текстового файла.
+        Десериализует каталог товаров из файла CSV.
 
         Args:
-            file_path (str): Путь к текстовому файлу для десериализации.
+            file_path (str): Путь к файлу CSV для десериализации.
 
         Returns:
             ItemCatalog: Объект каталога товаров.
@@ -22,7 +22,7 @@ class TxtItemCatalogDeserializer(IItemCatalogDeserializer):
 
         with open(file_path, encoding='utf-8') as file:
             for row in file.read().splitlines():
-                data = row.split(';')
+                data = row.split(',')
                 item = Item(
                     data[1],
                     int(data[2]),

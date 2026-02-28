@@ -1,3 +1,4 @@
+from HomeWork.Item.Item import Item
 from HomeWork.Item.ItemState import ItemState
 from HomeWork.Item.ItemView import ItemView
 import os
@@ -8,13 +9,22 @@ class ItemMenu:
     Представляет меню для взаимодействия с карточкой товара.
     """
 
-    def __init__(self, item_view: ItemView):
+    def __init__(self, item_view: ItemView) -> None:
+        """
+        Инициализирует меню товара.
+
+        Args:
+            item_view (ItemView): Представление для отображения информации о товаре.
+        """
         self.item_view = item_view
         self.__menu_opened = False
 
-    def open(self, item) -> None:
+    def open(self, item: Item) -> None:
         """
         Запускает цикл меню для взаимодействия с товаром.
+
+        Args:
+            item (Item): Товар, с которым нужно взаимодействовать.
         """
 
         self.__menu_opened = True
@@ -26,7 +36,13 @@ class ItemMenu:
 
             self.__handle_input(item)
 
-    def __handle_input(self, item):
+    def __handle_input(self, item: Item) -> None:
+        """
+        Обрабатывает ввод пользователя в меню.
+
+        Args:
+            item (Item): Товар, которым управляет меню.
+        """
         choice = input("Выберите действие: ")
 
         if choice == "11":

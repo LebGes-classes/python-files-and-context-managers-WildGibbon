@@ -1,5 +1,21 @@
+from typing import List
+from HomeWork.Item.Item import Item
+
+
 class ItemCatalogMenuView:
-    def visualize(self, items):
+    """
+    Класс для визуализации меню каталога товаров.
+    """
+    def visualize(self, items: List[Item]) -> str:
+        """
+        Создает текстовое представление меню каталога товаров.
+
+        Args:
+            items (list): Список товаров для отображения в меню.
+
+        Returns:
+            str: Строка с форматированным меню каталога.
+        """
         items_list = ""
         for i in range(len(items)):
             items_list += f"║ {i + 1}: {items[i].get_name()}".ljust(40) + "║\n"
@@ -15,4 +31,3 @@ class ItemCatalogMenuView:
                   f"╚═══════════════════════════════════════╝" + "\n")
 
         return result
-

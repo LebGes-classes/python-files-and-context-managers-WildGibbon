@@ -9,7 +9,7 @@ from HomeWork.Item.ItemView import ItemView
 deserializer = JsonItemCatalogDeserializer()
 serializer = JsonItemCatalogSerializer()
 file_manager = FileManager()
-file_path = "HomeWork/Data/data_json.json"
+file_path = "HomeWork/Data/my_data.json"
 
 catalog = deserializer.deserialize(file_path)
 item_menu = ItemMenu(ItemView())

@@ -1,8 +1,21 @@
+from HomeWork.Item.Item import Item
 from HomeWork.Item.ItemState import ItemState
 
 
 class ItemView:
-    def visualize(self, item):
+    """
+    Класс для визуализации информации о товаре.
+    """
+    def visualize(self, item: Item) -> str:
+        """
+        Создает текстовое представление карточки товара.
+
+        Args:
+            item (Item): Объект товара для визуализации.
+
+        Returns:
+            str: Строка с форматированной информацией о товаре.
+        """
         card_state = ""
 
         if item.get_state() == ItemState.TEMPORARY_UNAVAILABLE:

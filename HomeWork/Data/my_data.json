@@ -1,9 +1,9 @@
 {
     "items": [
         {
-            "name": "Смартфон 'Флагман X'",
+            "name": "нормальный телефон че вы пристали",
             "quantity": 50,
-            "state": 1,
+            "state": 3,
             "supplier": "ООО 'Технологии'",
             "manufacturer": "GlobalTech",
             "price": 45000.0,
@@ -12,7 +12,7 @@
             "product_id": "SM-67890"
         },
         {
-            "name": "ЕБЕЙШАЯ КАМЕРА",
+            "name": "ПЛОХАЯ(УЖАСНАЯ) КАМЕРА",
             "quantity": 5,
             "state": 3,
             "supplier": "ООО 'Электроника'",
@@ -35,6 +35,28 @@
         },
         {
             "name": "ПРИДУРОК",
+            "quantity": 0,
+            "state": 3,
+            "supplier": "default",
+            "manufacturer": "default",
+            "price": 1,
+            "location": "default",
+            "city": "default",
+            "product_id": "default"
+        },
+        {
+            "name": "IPHONEX",
+            "quantity": 0,
+            "state": 1,
+            "supplier": "default",
+            "manufacturer": "default",
+            "price": 1,
+            "location": "default",
+            "city": "default",
+            "product_id": "default"
+        },
+        {
+            "name": "БЛЯ ОНА В ИНСТИ ",
             "quantity": 0,
             "state": 3,
             "supplier": "default",

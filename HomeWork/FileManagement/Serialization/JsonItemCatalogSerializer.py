@@ -1,8 +1,22 @@
+from typing import Dict, Any, List
 from HomeWork.FileManagement.Serialization.IItemCatalogSerializer import IItemCatalogSerializer
+from HomeWork.ItemCatalog.ItemCatalog import ItemCatalog
 
 
 class JsonItemCatalogSerializer(IItemCatalogSerializer):
-    def serialize(self, item_catalog):
+    """
+    Класс для сериализации каталога товаров в формат JSON.
+    """
+    def serialize(self, item_catalog: ItemCatalog) -> Dict[str, List[Dict[str, Any]]]:
+        """
+        Сериализует каталог товаров в формат JSON.
+
+        Args:
+            item_catalog (ItemCatalog): Каталог товаров для сериализации.
+
+        Returns:
+            dict: Словарь, представляющий каталог товаров в формате JSON.
+        """
         items = []
 
         for item in item_catalog.get_items():

@@ -7,7 +7,19 @@ from HomeWork.ItemCatalog.ItemCatalog import ItemCatalog
 
 
 class JsonItemCatalogDeserializer(IItemCatalogDeserializer):
-    def deserialize(self, file_path):
+    """
+    Класс для десериализации каталога товаров из файла JSON.
+    """
+    def deserialize(self, file_path: str) -> ItemCatalog:
+        """
+        Десериализует каталог товаров из файла JSON.
+
+        Args:
+            file_path (str): Путь к файлу JSON для десериализации.
+
+        Returns:
+            ItemCatalog: Объект каталога товаров.
+        """
         with open(file_path, 'r', encoding='utf-8') as file:
             data = json.load(file)
             items = []
