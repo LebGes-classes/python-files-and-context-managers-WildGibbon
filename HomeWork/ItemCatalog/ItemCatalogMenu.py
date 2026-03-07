@@ -53,7 +53,14 @@ class ItemCatalogMenu:
                 self.__catalog.pop(card_choice - 1)
 
             else:
-                self.__item_menu.open(self.__catalog.get_items()[choice - 1])
+                choice_item = self.__catalog.get_items()[choice - 1]
+                choice_item_old_id = choice_item.get_item_id()
+
+                self.__item_menu.open(choice_item)
+
+                if any(choice_item.get_item_id() == item.get_item_id() for item in self.__catalog.get_items()):
+                    choice_item.set_product_id(choice_item_old_id)
+                    print("Такой id уже есть, старый id был оставлен")
 
     def __handle_input(self, lower_limit: int, upper_limit: int) -> int:
         """
