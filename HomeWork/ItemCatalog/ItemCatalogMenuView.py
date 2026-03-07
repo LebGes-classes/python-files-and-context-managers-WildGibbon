@@ -1,5 +1,6 @@
-from typing import List
 from HomeWork.Item.Item import Item
+
+from typing import List
 
 
 class ItemCatalogMenuView:

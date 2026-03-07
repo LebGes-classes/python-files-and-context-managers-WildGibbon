@@ -1,9 +1,9 @@
-import json
-
 from HomeWork.FileManagement.Deserialization.IItemCatalogDeserializer import IItemCatalogDeserializer
 from HomeWork.Item.Item import Item
 from HomeWork.Item.ItemState import ItemState
 from HomeWork.ItemCatalog.ItemCatalog import ItemCatalog
+
+import json
 
 
 class JsonItemCatalogDeserializer(IItemCatalogDeserializer):

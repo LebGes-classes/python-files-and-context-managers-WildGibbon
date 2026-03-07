@@ -1,6 +1,7 @@
-from typing import Dict, Any, List
 from HomeWork.FileManagement.Serialization.IItemCatalogSerializer import IItemCatalogSerializer
 from HomeWork.ItemCatalog.ItemCatalog import ItemCatalog
+
+from typing import Dict, Any, List
 
 
 class JsonItemCatalogSerializer(IItemCatalogSerializer):

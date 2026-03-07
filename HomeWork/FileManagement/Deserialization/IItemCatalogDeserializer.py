@@ -1,5 +1,6 @@
-from abc import ABC, abstractmethod
 from HomeWork.ItemCatalog.ItemCatalog import ItemCatalog
+
+from abc import ABC, abstractmethod
 
 
 class IItemCatalogDeserializer(ABC):

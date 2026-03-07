@@ -1,6 +1,6 @@
-from typing import Optional
-
 from HomeWork.Item.ItemState import ItemState
+
+from typing import Optional
 
 
 class Item:
@@ -292,4 +292,3 @@ class Item:
             raise Exception("Item must be registered to write off")
 
         self.__state = ItemState.WRITTEN_OFF
-

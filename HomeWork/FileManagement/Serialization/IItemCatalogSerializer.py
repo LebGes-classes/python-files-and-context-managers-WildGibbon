@@ -1,6 +1,7 @@
+from HomeWork.ItemCatalog.ItemCatalog import ItemCatalog
+
 from abc import ABC, abstractmethod
 from typing import Any
-from HomeWork.ItemCatalog.ItemCatalog import ItemCatalog
 
 
 class IItemCatalogSerializer(ABC):

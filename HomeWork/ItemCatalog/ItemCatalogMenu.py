@@ -1,10 +1,10 @@
-from os import system
-
 from HomeWork.Item.Item import Item
 from HomeWork.Item.ItemState import ItemState
 from HomeWork.Item.Menu.IItemMenu import IItemMenu
 from HomeWork.ItemCatalog.ItemCatalog import ItemCatalog
 from HomeWork.ItemCatalog.ItemCatalogMenuView import ItemCatalogMenuView
+
+from os import system
 
 
 class ItemCatalogMenu:
@@ -29,6 +29,7 @@ class ItemCatalogMenu:
         """
         Запускает цикл меню для взаимодействия с каталогом товаров.
         """
+
         self.__menu_opened = True
 
         while self.__menu_opened:
@@ -73,6 +74,7 @@ class ItemCatalogMenu:
         Returns:
             int: Корректный выбор пользователя.
         """
+
         valid_input = False
         choice = 0
 
